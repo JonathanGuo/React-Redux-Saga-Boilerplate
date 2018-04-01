@@ -1,6 +1,6 @@
 # ES6 React boilerplate using Webpack
 
-[![Travis](https://travis-ci.org/JonathanGuo/React-Redux-Saga-Boilerplate.svg?branch=master](https://travis-ci.org/JonathanGuo/React-Redux-Saga-Boilerplate.svg?branch=master) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
+[![Build Status](https://travis-ci.org/JonathanGuo/React-Redux-Saga-Boilerplate.svg?branch=master)](https://travis-ci.org/JonathanGuo/React-Redux-Saga-Boilerplate) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
 Big thanks to [KleoPetroff/react-webpack-boilerplate](https://github.com/KleoPetroff/react-webpack-boilerplate)
 
