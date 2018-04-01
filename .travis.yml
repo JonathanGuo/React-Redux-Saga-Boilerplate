@@ -1,0 +1,22 @@
+sudo: false
+language: node_js
+cache:
+  directories:
+    - node_modules
+branches:
+  only:
+      - master
+      - /^greenkeeper/.*$/
+notifications:
+  email: false
+node_js:
+  - "node"
+  - "lts/*"
+  - 8
+before_install:
+  - npm i -g npm@^5.8.0
+before_script:
+  - npm prune
+script:
+  - npm run test
+install: npm install
