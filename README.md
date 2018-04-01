@@ -1,4 +1,4 @@
-# ES6 React boilerplate using Webpack
+# ES6 React + Redux-Saga boilerplate using Webpack
 
 [![Build Status](https://travis-ci.org/JonathanGuo/React-Redux-Saga-Boilerplate.svg?branch=master)](https://travis-ci.org/JonathanGuo/React-Redux-Saga-Boilerplate) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
