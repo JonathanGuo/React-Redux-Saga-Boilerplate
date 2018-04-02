@@ -1,7 +1,6 @@
 const { resolve } = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const dotenv = require('dotenv');
 
@@ -68,7 +67,6 @@ const config = {
             debug: false,
         }),
         new ExtractTextPlugin({ filename: './styles/style.css', disable: false, allChunks: true }),
-        new CopyWebpackPlugin([{ from: './vendors', to: 'vendors' }]),
     ],
 
     resolve: {
