@@ -1,7 +1,7 @@
 const { resolve } = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const dotenv = require('dotenv');
 
 const dotenvResult = dotenv.config();
@@ -66,7 +66,9 @@ const config = {
             minimize: true,
             debug: false,
         }),
-        new ExtractTextPlugin({ filename: './styles/style.css', disable: false, allChunks: true }),
+        new MiniCssExtractPlugin({
+            filename: './styles/[name].css',
+        }),
     ],
 
     resolve: {
@@ -85,19 +87,16 @@ const config = {
             {
                 test: /\.scss$/,
                 exclude: /node_modules/,
-                use: ['css-hot-loader'].concat(ExtractTextPlugin.extract({
-                    fallback: 'style-loader',
-                    use: [
-                        'css-loader',
-                        {
-                            loader: 'sass-loader',
-                            query: {
-                                sourceMap: false,
-                            },
+                use: [
+                    {
+                        loader: MiniCssExtractPlugin.loader,
+                        options: {
+                            publicPath: '/',
                         },
-                    ],
-                    publicPath: '../',
-                })),
+                    },
+                    'css-loader',
+                    'sass-loader',
+                ],
             },
             {
                 test: /\.(png|jpg|gif)$/,
