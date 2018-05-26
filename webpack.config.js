@@ -1,7 +1,7 @@
 const { resolve } = require('path');
 
 const webpack = require('webpack');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OpenBrowserPlugin = require('open-browser-webpack-plugin');
 // Load dotenv
 const dotenv = require('dotenv');
@@ -65,19 +65,16 @@ const config = {
             {
                 test: /\.scss$/,
                 exclude: /node_modules/,
-                use: ['css-hot-loader'].concat(ExtractTextPlugin.extract({
-                    fallback: 'style-loader',
-                    use: [
-                        'css-loader',
-                        {
-                            loader: 'sass-loader',
-                            query: {
-                                sourceMap: false,
-                            },
+                use: [
+                    {
+                        loader: MiniCssExtractPlugin.loader,
+                        options: {
+                            publicPath: '/',
                         },
-                    ],
-                    publicPath: '../',
-                })),
+                    },
+                    'css-loader',
+                    'sass-loader',
+                ],
             },
             {
                 test: /\.(png|jpg|gif)$/,
@@ -180,7 +177,9 @@ const config = {
             },
         }),
         new webpack.optimize.ModuleConcatenationPlugin(),
-        new ExtractTextPlugin({ filename: './styles/style.css', disable: false, allChunks: true }),
+        new MiniCssExtractPlugin({
+            filename: './styles/[name].css',
+        }),
         new OpenBrowserPlugin({ url: 'http://localhost:8080' }),
         new webpack.HotModuleReplacementPlugin(),
     ],
