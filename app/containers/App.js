@@ -1,8 +1,8 @@
 import React, { PureComponent, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { action } from '../config/Store';
-import HelloWorld from '../components/HelloWorld';
+import { action } from 'App/config/Store';
+import HelloWorld from 'App/components/HelloWorld';
 
 class App extends PureComponent {
     componentDidMount() {

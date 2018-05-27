@@ -11,7 +11,7 @@ const dotEnvConfig = Object.keys(dotenvResult.parsed).reduce((result, key) => ({
     ...result,
     [key]: JSON.stringify(dotenvResult.parsed[key]),
 }), {});
-
+console.log(resolve(__dirname, 'app/'));
 const config = {
     mode: 'development',
 
@@ -22,7 +22,6 @@ const config = {
             'react-hot-loader/patch',
             'webpack-dev-server/client?http://localhost:8080',
             'webpack/hot/only-dev-server',
-            'raf/polyfill',
             'babel-polyfill',
             './index.js',
             './assets/scss/main.scss',
@@ -186,6 +185,11 @@ const config = {
     node: {
         fs: 'empty',
     },
+    resolve: {
+        alias: {
+            App: resolve(__dirname, 'app/'),
+        }
+    }
 };
 
 module.exports = config;
