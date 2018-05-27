@@ -17,7 +17,6 @@ const config = {
 
     entry: {
         app: [
-            'raf/polyfill',
             'babel-polyfill',
             './index.js',
             './assets/scss/main.scss',

@@ -30,8 +30,24 @@
     "block-scoped-var": "error",
     "block-spacing": "error",
     "import/no-extraneous-dependencies": "off",
-    "react/jsx-indent": ["error", 4],
+    "import/no-unresolved": [
+      "error",
+      {
+        "ignore": [
+          "App/"
+        ]
+      }
+    ],
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "never",
+        "jsx": "never"
+      }
+    ],
     "import/first": "off",
+    "react/jsx-indent": ["error", 4],
     "indent": [
         "error",
         4,
