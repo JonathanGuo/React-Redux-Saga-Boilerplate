@@ -72,6 +72,9 @@ const config = {
 
     resolve: {
         extensions: ['.js', '.jsx'],
+        alias: {
+            App: resolve(__dirname, 'app/'),
+        },
     },
 
     module: {
