@@ -188,8 +188,8 @@ const config = {
     resolve: {
         alias: {
             App: resolve(__dirname, 'app/'),
-        }
-    }
+        },
+    },
 };
 
 module.exports = config;
