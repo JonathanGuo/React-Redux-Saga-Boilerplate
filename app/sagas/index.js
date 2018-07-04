@@ -1,4 +1,9 @@
-import { put, take, all, call } from 'redux-saga/effects';
+import {
+    put,
+    take,
+    all,
+    call,
+} from 'redux-saga/effects';
 import Data from '../api/Data';
 
 export function* fetchNumber () {
