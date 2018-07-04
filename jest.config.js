@@ -14,7 +14,6 @@ module.exports = {
     testMatch: [
         '**/?(*.)(spec|test).js?(x)',
     ],
-    setupTestFrameworkScriptFile: 'raf/polyfill',
     transform: {
         '\\.js$': 'babel-jest',
     },

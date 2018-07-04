@@ -4,9 +4,9 @@ import React from 'react';
 import { Route } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { shallow, configure } from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
 import Root from '../../app/config/Root';
 import App from '../../app/containers/App';
-import Adapter from 'enzyme-adapter-react-16';
 
 configure({ adapter: new Adapter() });
 

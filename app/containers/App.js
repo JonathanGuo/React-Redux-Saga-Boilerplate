@@ -8,11 +8,16 @@ class App extends PureComponent {
     componentDidMount() {
         action('FETCH_DATA');
     }
+
     render () {
+        const { data } = this.props;
+
         return (
             <Fragment>
                 <HelloWorld />
-                <div>{ this.props.data }</div>
+                <div>
+                    { data }
+                </div>
             </Fragment>
         );
     }

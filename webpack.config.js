@@ -2,7 +2,6 @@ const { resolve } = require('path');
 
 const webpack = require('webpack');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const OpenBrowserPlugin = require('open-browser-webpack-plugin');
 // Load dotenv
 const dotenv = require('dotenv');
 
@@ -11,7 +10,7 @@ const dotEnvConfig = Object.keys(dotenvResult.parsed).reduce((result, key) => ({
     ...result,
     [key]: JSON.stringify(dotenvResult.parsed[key]),
 }), {});
-console.log(resolve(__dirname, 'app/'));
+
 const config = {
     mode: 'development',
 
@@ -44,6 +43,7 @@ const config = {
         contentBase: resolve(__dirname, 'build'),
         publicPath: '/',
         historyApiFallback: true,
+        open: true,
     },
 
     module: {
@@ -179,7 +179,6 @@ const config = {
         new MiniCssExtractPlugin({
             filename: './styles/[name].css',
         }),
-        new OpenBrowserPlugin({ url: 'http://localhost:8080' }),
         new webpack.HotModuleReplacementPlugin(),
     ],
     node: {
