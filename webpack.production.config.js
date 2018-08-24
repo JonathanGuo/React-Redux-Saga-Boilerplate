@@ -17,7 +17,7 @@ const config = {
 
     entry: {
         app: [
-            'babel-polyfill',
+            '@babel/polyfill',
             './index.js',
             './assets/scss/main.scss',
         ],
