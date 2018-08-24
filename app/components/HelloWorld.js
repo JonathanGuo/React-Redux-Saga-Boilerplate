@@ -16,7 +16,7 @@ class HelloWorld extends React.PureComponent<Props> {
                     width="40"
                     src={img}
                     alt="React Logo"
-                />=
+                />
             </React.Fragment>
         );
     }

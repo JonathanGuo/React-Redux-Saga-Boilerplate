@@ -7,10 +7,12 @@
 <PROJECT_ROOT>/*.xml
 <PROJECT_ROOT>/*.yml
 <PROJECT_ROOT>/*.js*
+<PROJECT_ROOT>/flow-typed
 
 [include]
 
 [libs]
+<PROJECT_ROOT>/flow-typed
 
 [lints]
 
