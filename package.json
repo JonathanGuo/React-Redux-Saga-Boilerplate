@@ -15,8 +15,8 @@
   },
   "husky": {
     "hooks": {
-      "precommit": "cross-env npm run lint && npm test",
-      "prepush": "cross-env npm run lint && npm test"
+      "precommit": "cross-env npm run lint && npm test && npm run flow",
+      "prepush": "cross-env npm run lint && npm test && npm run flow"
     }
   },
   "author": "Jonathan Guo <chc.jonathan.guo@outlook.com>",
