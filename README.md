@@ -18,7 +18,7 @@ The boilerplate includes:
 - [x] Separate CSS stylesheets generation
 - [x] Automatic HTML generation
 - [x] Production Config
-- [x] Custom Babel Preset with Decorators, Class Properties, Rest/Spread operator support
+- [x] Custom Babel 7 Preset with Decorators, Class Properties, Rest/Spread operator support
 - [x] Export Separate Vendor Files
 - [x] Redux
 - [x] Redux-Saga
