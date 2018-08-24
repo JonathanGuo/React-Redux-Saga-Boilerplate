@@ -1,7 +1,10 @@
+// @flow
 import React from 'react';
 import img from '../assets/images/react_logo_512x512.png';
 
-class HelloWorld extends React.PureComponent {
+type Props = {};
+
+class HelloWorld extends React.PureComponent<Props> {
     render () {
         return (
             <React.Fragment>
