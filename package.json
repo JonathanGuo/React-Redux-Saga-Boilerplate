@@ -11,13 +11,19 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "coverage": "jest --coverage",
-    "precommit": "cross-env npm run lint && npm test",
-    "prepush": "cross-env npm run lint && npm test"
+    "flow": "flow"
+  },
+  "husky": {
+    "hooks": {
+      "precommit": "cross-env npm run lint && npm test",
+      "prepush": "cross-env npm run lint && npm test"
+    }
   },
   "author": "Jonathan Guo <chc.jonathan.guo@outlook.com>",
   "license": "MIT",
   "dependencies": {
     "@babel/polyfill": "7.0.0-beta.54",
+    "@babel/preset-flow": "^7.0.0-rc.2",
     "axios": "^0.18.0",
     "cross-env": "^5.1.4",
     "dotenv": "^5.0.1",
@@ -56,15 +62,17 @@
     "eslint": "^5.0.1",
     "eslint-config-airbnb": "^17.0.0",
     "eslint-loader": "^2.0.0",
+    "eslint-plugin-flowtype": "^2.50.0",
     "eslint-plugin-import": "^2.13.0",
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-react": "^7.10.0",
     "file-loader": "1.1.10",
+    "flow-bin": "^0.79.1",
     "html-webpack-plugin": "^3.2.0",
-    "husky": "^1.0.0-rc.6",
+    "husky": "^1.0.0-rc.13",
     "jest": "22.1.0",
     "mini-css-extract-plugin": "^0.4.0",
-    "node-sass": "^4.9.0",
+    "node-sass": "^4.9.3",
     "open-browser-webpack-plugin": "0.0.5",
     "react-test-renderer": "16.2.0",
     "redux-logger": "^3.0.6",
