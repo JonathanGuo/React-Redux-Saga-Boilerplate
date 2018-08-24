@@ -11,7 +11,7 @@ The boilerplate includes:
 - [x] React Router v4
 - [x] Component testing using [Enzyme](https://github.com/airbnb/enzyme), [Jest](https://facebook.github.io/jest) and [redux-saga-test-plan](https://github.com/jfairbank/redux-saga-test-plan)
 - [x] Code Coverage
-- [x] Webpack V4and Webpack Dev Server (v.3.1.1) with Scope Hoisting enabled
+- [x] Webpack V4 and Webpack Dev Server (v.3.1.1) with Scope Hoisting enabled
 - [x] Hot Module Replacement using [react-hot-loader](https://github.com/gaearon/react-hot-loader)
 - [x] ES6 linting with continuous linting on file change
 - [x] SASS support
@@ -23,6 +23,7 @@ The boilerplate includes:
 - [x] Redux
 - [x] Redux-Saga
 - [x] DotEnv
+- [x] Flow
 
 ## Starting the dev server
 
