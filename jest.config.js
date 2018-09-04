@@ -15,6 +15,7 @@ module.exports = {
         '**/?(*.)(spec|test).js?(x)',
     ],
     transform: {
-        '\\.js$': 'babel-jest',
+        '^.+\\.jsx?$': 'babel-jest',
     },
+    testURL: 'http://localhost',
 };
