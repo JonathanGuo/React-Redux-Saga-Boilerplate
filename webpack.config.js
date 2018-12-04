@@ -2,14 +2,7 @@ const { resolve } = require('path');
 
 const webpack = require('webpack');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-// Load dotenv
-const dotenv = require('dotenv');
-
-const dotenvResult = dotenv.config();
-const dotEnvConfig = Object.keys(dotenvResult.parsed).reduce((result, key) => ({
-    ...result,
-    [key]: JSON.stringify(dotenvResult.parsed[key]),
-}), {});
+const Dotenv = require('dotenv-webpack');
 
 const config = {
     mode: 'development',
@@ -159,13 +152,7 @@ const config = {
     },
 
     plugins: [
-        new webpack.DefinePlugin({
-            'process.env': {
-                ...process.env,
-                NODE_ENV: JSON.stringify('development'),
-                ...dotEnvConfig,
-            },
-        }),
+        new Dotenv(),
         new webpack.LoaderOptionsPlugin({
             test: /\.jsx?$/,
             options: {

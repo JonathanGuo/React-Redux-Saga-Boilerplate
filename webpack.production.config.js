@@ -2,13 +2,7 @@ const { resolve } = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const dotenv = require('dotenv');
-
-const dotenvResult = dotenv.config();
-const dotEnvConfig = Object.keys(dotenvResult.parsed).reduce((result, key) => ({
-    ...result,
-    [key]: JSON.stringify(dotenvResult.parsed[key]),
-}), {});
+const Dotenv = require('dotenv-webpack');
 
 const config = {
     mode: 'production',
@@ -48,13 +42,7 @@ const config = {
     },
 
     plugins: [
-        new webpack.DefinePlugin({
-            'process.env': {
-                ...process.env,
-                NODE_ENV: JSON.stringify('development'),
-                ...dotEnvConfig,
-            },
-        }),
+        new Dotenv(),
         new HtmlWebpackPlugin({
             template: `${__dirname}/app/index.html`,
             filename: 'index.html',

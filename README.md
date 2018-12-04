@@ -6,7 +6,7 @@ Big thanks to [KleoPetroff/react-webpack-boilerplate](https://github.com/KleoPet
 
 The boilerplate includes: 
 
-- [x] React 16.5.2
+- [x] React 16.6.0
 - [x] ECMAScript 6 and JSX support
 - [x] React Router v4
 - [x] Component testing using [Enzyme](https://github.com/airbnb/enzyme), [Jest](https://facebook.github.io/jest) and [redux-saga-test-plan](https://github.com/jfairbank/redux-saga-test-plan)
