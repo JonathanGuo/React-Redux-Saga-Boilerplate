@@ -6,12 +6,12 @@ Big thanks to [KleoPetroff/react-webpack-boilerplate](https://github.com/KleoPet
 
 The boilerplate includes: 
 
-- [x] React 16.6.0
+- [x] React 16.7.0
 - [x] ECMAScript 6 and JSX support
 - [x] React Router v4
 - [x] Component testing using [Enzyme](https://github.com/airbnb/enzyme), [Jest](https://facebook.github.io/jest) and [redux-saga-test-plan](https://github.com/jfairbank/redux-saga-test-plan)
 - [x] Code Coverage
-- [x] Webpack v4 and Webpack Dev Server (v.3.1.9) with Scope Hoisting enabled
+- [x] Webpack v4 and Webpack Dev Server (v3.1.14) with Scope Hoisting enabled
 - [x] Hot Module Replacement using [react-hot-loader](https://github.com/gaearon/react-hot-loader)
 - [x] ES6 linting with continuous linting on file change
 - [x] SASS support
